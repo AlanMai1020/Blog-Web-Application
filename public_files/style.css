@@ -1,0 +1,13 @@
+.post_card {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+.input-group .form-control.me-2 {
+    width: 300px;
+}
