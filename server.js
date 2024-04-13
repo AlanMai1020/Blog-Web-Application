@@ -1,5 +1,6 @@
 //Import libraries
 const express = require("express");
+require("dotenv").config();
 const post_router = require("./routes/post");
 const register_router = require("./routes/register");
 const login_router = require("./routes/login");
@@ -12,11 +13,9 @@ const mongoose = require("mongoose");
 const method_override = require("method-override");
 const session = require("express-session");
 
-const db_url = "mongodb+srv://alan:12345@blog.y0pqeyz.mongodb.net/alan_db?retryWrites=true&w=majority&appName=Blog";
-
 //Start server
 const app = express();
-mongoose.connect(db_url)
+mongoose.connect(process.env.DB_URL)
     .then((reseult) => {
         console.log("Connected to Database");
         app.listen(3000);
